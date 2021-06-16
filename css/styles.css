@@ -597,7 +597,8 @@ img {
     margin-left: 10px;
     fill: currentColor;
 }
-.icon-send:hover {
+.icon-send:hover,
+.icon-send:focus {
     fill: currentColor;
 }
 /* Модальное окно */
@@ -644,20 +645,24 @@ img {
     margin-right: 8px;
     margin-top: 8px;
     background-color: inherit;
-    color: var( --blue-color-text);
+    color: var(--black-color);
     cursor: pointer;
     margin-left: auto;
+    transition: color 250ms var(--timing-function);
+}
+.button-close-modal:hover,
+.button-close-modal:focus {
+    color: var(--blue-color-text);
 }
 .icon-cross {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.icon-cross:hover {
     fill: currentColor;
 }
-textarea {
-    resize: none;
+.icon-cross:hover,
+.icon-cross:focus {
+    fill: currentColor;
 }
 .form {
     padding-right: 40px;
@@ -677,6 +682,7 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    position: relative;
 }
 .form-label {
     font-weight: 400;
@@ -691,7 +697,26 @@ textarea {
     border-radius: 4px;
     height: 40px;
     padding: 11px 12px;
+    padding-left: 42px;
+    position: relative;
+    transition: 250ms var(--timing-function);
 }
+.icon-modal {
+    position: absolute;
+    top: 30px;
+    left: 13px;
+}
+.form-input:focus,
+.form-input-comment:focus {
+    outline: none; 
+    border-color: var(--blue-color-text);
+    transition: border-color 250ms var(--timing-function)
+}
+.form-input:focus + .icon-modal {
+    fill: var(--blue-color-text);
+    transition: fill 250ms var(--timing-function)
+}
+
 .form-input-comment {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -700,6 +725,7 @@ textarea {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
+    resize: none;
 }
 .form-input-comment::placeholder {
     color: rgba(117, 117, 117, 0.5);
