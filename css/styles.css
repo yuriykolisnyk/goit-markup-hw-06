@@ -762,8 +762,11 @@ img {
     background-color: var(--white-color);
     transition:  250ms var(--timing-function);
 }
-.checkbox:checked + .icon-check,
 .checkbox:focus + .icon-check {
+    outline: 1px solid var(--blue-color-text);
+}
+
+.checkbox:checked + .icon-check {
     background-origin: content-box;
     background-color: var(--blue-color-text);
     border-color: var(--blue-color-text);
