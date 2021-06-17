@@ -748,6 +748,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition:  250ms var(--timing-function);
 }
 .icon-check {
@@ -761,10 +762,14 @@ img {
     background-color: white;
     transition:  250ms var(--timing-function);
 }
-.checkbox:checked + .icon-check{
+.checkbox:focus + .icon-check {
+    border-color: var(--blue-color-text);
+    transition: border-color 250ms var(--timing-function);
+}
+.checkbox:checked + .icon-check {
     background-origin: content-box;
     background-color: var(--blue-color-text);
-    border: 2px solid var(--blue-color-text);
+    border-color: var(--blue-color-text);
     fill: white;
     transition: fill 250ms var(--timing-function),
     background-color 250ms var(--timing-function),
