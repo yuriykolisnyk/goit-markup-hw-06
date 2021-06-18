@@ -627,6 +627,7 @@ img {
     transition: transform 400ms Var(--timing-function);
     height: 581px;
     width: 528px;
+    padding: 40px;
     border-radius: 4px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
@@ -634,16 +635,17 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);  
 }
 .button-close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
     padding: 0;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    margin-right: 8px;
-    margin-top: 8px;
     background-color: inherit;
     color: var(--black-color);
     cursor: pointer;
@@ -663,10 +665,6 @@ img {
 .icon-cross:hover,
 .icon-cross:focus {
     fill: currentColor;
-}
-.form {
-    padding-right: 40px;
-    padding-left: 40px;
 }
 .form-title {
     text-align: center;
